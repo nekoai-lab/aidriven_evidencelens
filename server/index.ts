@@ -156,8 +156,11 @@ async function getGeminiExplanation(
         return JSON.parse(jsonStr);
     } catch (e: any) {
         console.error("Gemini Error:", e.message);
-        // Return detailed error as requested
-        return { reasoning: `AI解説失敗 (${usedModelName}): ${e.message}`, highlight_area: "全体" };
+        // Fallback: Friendly Moon Cat Error Message
+        return {
+            reasoning: "ごめんね、ちょっと匂いがわからなかったにゃ... (通信エラー)\nでも検出器のスコアは出ているから、そっちを参考にしてみて！",
+            highlight_area: "全体"
+        };
     }
 }
 
