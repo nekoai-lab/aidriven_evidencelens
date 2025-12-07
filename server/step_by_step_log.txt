@@ -1,0 +1,20 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 売 add secrets lifecycle management: https://dotenvx.com/ops
+=== STEP-BY-STEP DIAGNOSIS ===
+
+Testing HF Model: Nahrawy/AI-or-Human
+Sending to: https://router.huggingface.co/hf-inference/models/Nahrawy/AI-or-Human
+笶・Failed. Status: 404
+Error: "Not Found"
+   Retrying with Legacy Endpoint...
+   笶・Legacy Failed too.
+
+Testing HF Model: umm-maybe/AI-image-detector
+Sending to: https://router.huggingface.co/hf-inference/models/umm-maybe/AI-image-detector
+笶・Failed. Status: 400
+Error: {"error":"mean must have 1 elements if it is an iterable, got 3"}
+   Retrying with Legacy Endpoint...
+   笶・Legacy Failed too.
+
+Testing Gemini API...
+笶・Gemini Failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+=== END ===

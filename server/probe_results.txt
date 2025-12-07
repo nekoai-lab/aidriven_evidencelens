@@ -1,0 +1,20 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 藤 add observability to secrets: https://dotenvx.com/ops
+=== MODEL PROBE START ===
+HF_TOKEN: OK
+GEMINI_API_KEY: OK
+
+--- Hugging Face ---
+[HF] 笶・Falconsai/nsfw_image_detection: 400 - {"error":"mean must have 1 elements if it is an iterable, got 3"}
+[HF] 笶・Organika/sdxl-detector: 400 - {"error":"mean must have 1 elements if it is an iterable, got 3"}
+[HF] 笶・Ojimi/anime-kawai-diffusion-detection: 404 - "Not Found"
+[HF] 笶・saltacc/anime-ai-detect: 404 - "Not Found"
+[HF] 笶・umm-maybe/AI-image-detector: 400 - {"error":"mean must have 1 elements if it is an iterable, got 3"}
+[HF] 笶・Ateeqq/ai-vs-human-image-detector: 400 - {"error":"mean must have 1 elements if it is an iterable, got 3"}
+
+--- Gemini ---
+[GEMINI] 笶・gemini-1.5-flash: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod...
+[GEMINI] 笶・gemini-1.5-flash-latest: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod...
+[GEMINI] 笶・gemini-1.5-flash-001: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod...
+[GEMINI] 笶・gemini-pro: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod...
+[GEMINI] 笶・gemini-1.0-pro: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/mod...
+=== MODEL PROBE END ===

@@ -1,0 +1,125 @@
+
+> aidriven_evidencelens@0.0.0 lint
+> eslint .
+
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\check_token.ts
+  25:25  error  Unexpected any. Specify a different type       @typescript-eslint/no-explicit-any
+  45:19  error  'response' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  47:25  error  Unexpected any. Specify a different type       @typescript-eslint/no-explicit-any
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\debug_request.ts
+  15:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  23:24  error  A `require()` style import is forbidden   @typescript-eslint/no-require-imports
+  27:24  error  A `require()` style import is forbidden   @typescript-eslint/no-require-imports
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\server\index.ts
+   88:37  error  Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  118:13  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  124:13  error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  171:9   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  175:9   error  Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\EvidenceMini.tsx
+  39:14  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\EvidenceMini.tsx:39:14
+  37 |             <h4 className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wider">Detection Evidence</h4>
+  38 |
+> 39 |             <StatusIcon checked={synthid.checked} present={synthid.present} label="SynthID" />
+     |              ^^^^^^^^^^ This component is created during render
+  40 |             <StatusIcon checked={c2pa.checked} present={c2pa.present} label="C2PA (Credentials)" />
+  41 |
+  42 |             <div className="flex justify-between items-center text-xs py-1">
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\EvidenceMini.tsx:10:24
+   8 |     const { synthid, c2pa, ensembleScore } = evidence;
+   9 |
+> 10 |     const StatusIcon = ({ checked, present, label }: { checked: boolean, present: boolean | null, label: string }) => {
+     |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |         let statusText = "譛ｪ蛻､螳・;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |         let statusColor = "text-gray-500";
+     窶ｦ
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |         );
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |     };
+     | ^^^^^^ The component is created during render here
+  34 |
+  35 |     return (
+  36 |         <div className="bg-gray-900/50 rounded p-3 text-sm border border-gray-700">  react-hooks/static-components
+  40:14  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\EvidenceMini.tsx:40:14
+  38 |
+  39 |             <StatusIcon checked={synthid.checked} present={synthid.present} label="SynthID" />
+> 40 |             <StatusIcon checked={c2pa.checked} present={c2pa.present} label="C2PA (Credentials)" />
+     |              ^^^^^^^^^^ This component is created during render
+  41 |
+  42 |             <div className="flex justify-between items-center text-xs py-1">
+  43 |                 <span className="text-gray-400">Detector Ensemble</span>
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\EvidenceMini.tsx:10:24
+   8 |     const { synthid, c2pa, ensembleScore } = evidence;
+   9 |
+> 10 |     const StatusIcon = ({ checked, present, label }: { checked: boolean, present: boolean | null, label: string }) => {
+     |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 |         let statusText = "譛ｪ蛻､螳・;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |         let statusColor = "text-gray-500";
+     窶ｦ
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 32 |         );
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |     };
+     | ^^^^^^ The component is created during render here
+  34 |
+  35 |     return (
+  36 |         <div className="bg-gray-900/50 rounded p-3 text-sm border border-gray-700">                                           react-hooks/static-components
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\HistoryPanel.tsx
+  14:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\HistoryPanel.tsx:14:9
+  12 |
+  13 |     useEffect(() => {
+> 14 |         setHistory(getHistory());
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |     }, [refreshTrigger]);
+  16 |
+  17 |     if (history.length === 0) return null;  react-hooks/set-state-in-effect
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\PreviewPane.tsx
+  14:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\components\PreviewPane.tsx:14:9
+  12 |     useEffect(() => {
+  13 |         const url = fileToObjectUrl(file);
+> 14 |         setPreviewUrl(url);
+     |         ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |         return () => URL.revokeObjectURL(url);
+  16 |     }, [file]);
+  17 |  react-hooks/set-state-in-effect
+
+C:\Users\nkusa\ai-driven\aidriven_evidencelens\src\pages\Home.tsx
+  44:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+笨・16 problems (16 errors, 0 warnings)
+

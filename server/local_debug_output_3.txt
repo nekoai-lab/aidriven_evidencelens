@@ -1,0 +1,10 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 柏 prevent building .env in docker: https://dotenvx.com/prebuild
+=== LOCAL DEBUG START ===
+HF_TOKEN present: true
+Querying Ateeqq/ai-vs-human-image-detector...
+[ERROR] Ateeqq/ai-vs-human-image-detector: Status 400
+Details: {"error":"mean must have 1 elements if it is an iterable, got 3"}
+Querying prithivMLmods/OpenSDI-Flux.1-SigLIP2...
+[ERROR] prithivMLmods/OpenSDI-Flux.1-SigLIP2: Status 404
+Details: "Not Found"
+=== LOCAL DEBUG END ===

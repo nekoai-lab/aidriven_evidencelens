@@ -1,0 +1,13 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 笞呻ｸ・ write to custom object with { processEnv: myObject }
+
+Testing: Smogy/SMOGY-Ai-images-detector
+笶・Failed: 404 Request failed with status code 404
+
+Testing: Ateeqq/ai-vs-human-image-detector
+笶・Failed: 400 mean must have 1 elements if it is an iterable, got 3
+
+Testing: umm-maybe/AI-image-detector
+笶・Failed: 400 mean must have 1 elements if it is an iterable, got 3
+
+Testing Gemini (gemini-pro)...
+笶・Gemini Failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.

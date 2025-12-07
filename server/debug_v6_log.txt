@@ -1,0 +1,10 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 笞呻ｸ・ enable debug logging with { debug: true }
+Testing Ateeqq/ai-vs-human-image-detector with real image (92590 bytes)...
+笨・Ateeqq/ai-vs-human-image-detector: OK 200
+[{"label":"ai","score":0.9998131394386292},{"label":"hum","score":0.0001869143743533641}]
+Testing umm-maybe/AI-image-detector with real image (92590 bytes)...
+笨・umm-maybe/AI-image-detector: OK 200
+[{"label":"artificial","score":0.6224585771560669},{"label":"human","score":0.37754136323928833}]
+Testing Falconsai/nsfw_image_detection with real image (92590 bytes)...
+笨・Falconsai/nsfw_image_detection: OK 200
+[{"label":"normal","score":0.9989933371543884},{"label":"nsfw","score":0.0010066493414342403}]
