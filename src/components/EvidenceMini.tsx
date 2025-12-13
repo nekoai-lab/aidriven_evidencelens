@@ -30,7 +30,7 @@ const StatusIcon = ({ checked, present, label }: { checked: boolean, present: bo
 };
 
 export default function EvidenceMini({ evidence }: EvidenceMiniProps) {
-    const { synthid, c2pa, ensembleScore } = evidence;
+    const { c2pa, ensembleScore } = evidence;
 
     return (
         <div className="bg-gray-900/50 rounded p-3 text-sm border border-gray-700">
