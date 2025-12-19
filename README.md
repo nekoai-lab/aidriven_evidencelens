@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Moon Cat AI 判定局 (Evidence Lens)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Moon Cat AI Badge](https://img.shields.io/badge/Moon%20Cat-AI-purple?style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-Currently, two official plugins are available:
+**Moon Cat AI 判定局**は、画像がAIによって生成されたものかどうかを判定するWebアプリケーションです。
+「サイバー × カワイイ」な世界観の中で、複数の検出モデルと最新のAI技術（Gemini & C2PA）を組み合わせて、高精度かつ分かりやすい判定を提供します。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌙 特徴 (Features)
 
-## React Compiler
+*   **マルチモデル判定**: 複数のHuggingFace上の検出モデル（Ensemble）を使用し、統計的なAI度を算出。
+*   **C2PA (Content Credentials) 対応**: 画像に含まれる電子署名（C2PA/CR）を解析し、来歴を確認。
+*   **「月ねこ」による解説**: Google Gemini 2.5 Flash を活用し、結果を「月ねこ」というキャラクターが分かりやすく解説。
+*   **サイバー × カワイイ UI**: 黒を基調としたネオンカラーと、遊び心のあるインタラクション。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 セットアップ (Getting Started)
 
-## Expanding the ESLint configuration
+### 前提条件
+*   Node.js (v18以上推奨)
+*   HuggingFace API Token
+*   Google Gemini API Key
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. リポジトリのクローン
+```bash
+git clone https://github.com/nekoai-lab/aidriven_evidencelens.git
+cd aidriven_evidencelens
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. 依存関係のインストール
+```bash
+npm install
 ```
+
+### 3. 環境変数の設定
+`.env.example` をコピーして `.env` を作成し、必要なキーを入力してください。
+
+```bash
+cp .env.example .env
+```
+
+`.env` の内容:
+```env
+HF_TOKEN=your_huggingface_token_here
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### 4. アプリケーションの起動
+開発サーバー（フロントエンド + バックエンド）を起動します。
+
+**バックエンド (Port 3003)**
+```bash
+npm run server
+```
+
+**フロントエンド (Port 5173)**
+別のターミナルで実行してください。
+```bash
+npm run dev
+```
+
+ブラウザで `http://localhost:5173` にアクセスしてください。
+
+## 🛠️ 技術スタック
+
+*   **Frontend**: React, TypeScript, Vite, TailwindCSS
+*   **Backend**: Node.js, Express
+*   **AI/API**: Google Gemini API, HuggingFace Inference API, C2PA-Node
+
+## 📝 License
+
+This project is licensed under the MIT License.
