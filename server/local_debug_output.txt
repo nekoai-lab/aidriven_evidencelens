@@ -1,6 +1,0 @@
-[dotenv@17.2.3] injecting env (2) from .env -- tip: 笞呻ｸ・ enable debug logging with { debug: true }
-=== LOCAL DEBUG START ===
-HF_TOKEN present: true
-Querying Ateeqq/ai-vs-human-image-detector...
-Querying prithivMLmods/OpenSDI-Flux.1-SigLIP2...
-=== LOCAL DEBUG END ===
