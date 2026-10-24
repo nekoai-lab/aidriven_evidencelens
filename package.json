@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "axios": "^1.13.2",
+    "axios": "^1.20.0",
     "c2pa-node": "^0.5.26",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
